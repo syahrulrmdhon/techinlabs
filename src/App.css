@@ -1,3 +1,21 @@
 .hero-img {
   background: transparent url(http://bg.vastthemes.com/row/startup_header_update.jpg) center center/cover no-repeat scroll !important;
+  position: relative;
+}
+
+.separator {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+.description {
+  font-family: Lato,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #6b6b6b
+}
+
+.wwd {
+  padding: 0;
 }

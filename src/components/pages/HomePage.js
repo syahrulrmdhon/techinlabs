@@ -5,7 +5,9 @@ import {
   Button,
   Container,
   Header,
+  Grid,
   Icon,
+  Image,
   Menu,
   Responsive,
   Segment,
@@ -14,32 +16,47 @@ import {
 } from 'semantic-ui-react'
 
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h1'
-      content='Imagine-a-Company'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-    <Header
-      as='h2'
-      content='Do whatever you want when you want to.'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
-    <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
-    </Button>
+  <Container >
+  <Grid divided='vertically'>
+    <Grid.Row columns={2}>
+    <Grid.Column>
+        <Image 
+        src='https://raw.githubusercontent.com/syahrulrmdhon/techinlabs/master/src/assets/flat-devices.png'
+        style={{
+            fontSize: mobile ? '2em' : '4em',
+            fontWeight: 'normal',
+            marginBottom: 0,
+            marginTop: mobile ? '1.5em' : '3em',
+        }} />
+      </Grid.Column>
+      <Grid.Column>
+        <Image 
+            src='https://raw.githubusercontent.com/syahrulrmdhon/techinlabs/master/src/assets/sss-2.png' 
+            style={{
+                fontSize: mobile ? '1em' : '3em',
+                fontWeight: 'normal',
+                marginBottom: 0,
+                marginTop: mobile ? '0.5em' : '2em',
+            }}
+            fluid
+        />
+        <Header
+        as='h2'
+        content='For Your Startup Needs !'
+        inverted
+        style={{
+            fontSize: mobile ? '1em' : '1.2em',
+            fontWeight: 'normal',
+            marginTop: mobile ? '0.5em' : '1.5em',
+        }}
+        />
+        <Button primary size='huge'>
+        Connecting Now
+        <Icon name='right arrow' />
+        </Button>
+      </Grid.Column>
+    </Grid.Row>
+    </Grid>
   </Container>
 )
 
@@ -70,16 +87,17 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 550, padding: '1em 0em' }}
             className='hero-img'
             vertical
           >
-            <Menu
+           <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              style={{border:0}}
+              style={{border:0, fontSize:'12px'}}
+              borderless
               size='large'
             >
               <Container>
@@ -96,8 +114,9 @@ class DesktopContainer extends Component {
               </Container>
             </Menu>
             <HomepageHeading />
-          </Segment>
-        </Visibility>
+            <Image className='separator' src='https://raw.githubusercontent.com/syahrulrmdhon/techinlabs/master/src/assets/Separator-Header.png' fluid />
+            </Segment>
+         </Visibility>
 
         {children}
       </Responsive>

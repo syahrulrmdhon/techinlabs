@@ -6,7 +6,7 @@ import Favicon from 'react-favicon';
 
 
 const App = () => <div>
-    <Favicon url="https://raw.githubusercontent.com/syahrulrmdhon/material-design/master/public/favicon2.ico"/>
+    <Favicon url="https://raw.githubusercontent.com/syahrulrmdhon/techinlabs/master/src/assets/favicon.ico"/>
     <Route path={process.env.PUBLIC_URL + '/'} exact component={HomePage}/>
 </div>
 
